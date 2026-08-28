@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Projects — Jace Jacobz</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Projects built by Jace Jacobz — full-stack development and AI-adjacent tools.">
+
+<link rel="shortcut icon" href="assets/images/fav-icon.png" type="image/x-icon">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,500,700&f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="top">
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html#top" class="logo">JACE<span class="dot">//</span>JACOBZ</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="films.html">Films</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="index.html#contact" class="btn sm solid-coral">Let's talk</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ PAGE INTRO ============ -->
+<section class="page-hero">
+  <div class="container">
+    <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back home</a>
+    <span class="eyebrow">Projects</span>
+    <h1 class="section-title">Everything I've built.</h1>
+    <p class="section-note">Tools and products I've shipped — mostly AI-adjacent, always meant to be used, not just demoed.</p>
+  </div>
+</section>
+
+<!-- ============ FULL PROJECTS LIST ============ -->
+<!-- Add new projects here as more get shipped — nothing is capped
+     on this page, unlike the 3-item teaser on the homepage. -->
+<section class="section project">
+  <div class="container">
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-media">
+          <img src="assets/images/ORION.png" alt="Laptop showing code editor">
+        </div>
+        <div class="card-body">
+          <span class="tag dev"><i class="fa-solid fa-code"></i> Dev</span>
+          <h3>Ollama Assistant (Orion)</h3>
+          <p>A lightweight, on-device LLM wrapper for developer workflows — no cloud round-trip required.</p>
+          <a href="https://github.com/yourrepo/ollama-assistant" class="btn sm outline">GitHub <i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-media">
+          <img src="assets/images/Hostcanon.png" alt="HostCanon website">
+        </div>
+        <div class="card-body">
+          <span class="tag dev"><i class="fa-solid fa-code"></i> Dev</span>
+          <h3>HostCanon</h3>
+          <p>A website where developers can buy domains, servers, and hosting, all in one place.</p>
+          <a href="https://www.hostcanon.com/" class="btn sm outline">Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+
+      <!-- Note: your original file had this card duplicated three times —
+           kept a single copy here. Duplicate it (and swap the content)
+           for each additional real project. -->
+      <div class="card">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="Video editing and streaming setup">
+        </div>
+        <div class="card-body">
+          <span class="tag dev"><i class="fa-solid fa-code"></i> Dev</span>
+          <h3>Streaming Compositor</h3>
+          <p>Real-time video layering for live media, built on FFmpeg for low-latency broadcast pipelines.</p>
+          <a href="#" class="btn sm outline">Live demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-row">
+    <p>&copy; 2026 Jace Jacobz. In collaboration with KodeNest.</p>
+    <a href="#top" class="back-to-top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
