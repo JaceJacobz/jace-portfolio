@@ -14,7 +14,7 @@
   --code-tint:#EFEAFD;
   --sound:#E8A400;  /* music pillar — amber  */
   --sound-tint:#FDF2D9;
-  --frame:#0E7C6B;  /* film pillar  — teal   */
+  --frame:#0E7C6B;  /* video pillar — teal   */
   --frame-tint:#E4F3EF;
   --coral:#FF5433;  /* primary CTA  — coral  */
 
@@ -57,7 +57,7 @@ section{ scroll-margin-top:84px; }
   content:''; width:8px; height:8px; border-radius:50%; background:var(--coral);
 }
 
-/* pill tags — color follows pillar (dev = purple, music = amber, film = teal) */
+/* pill tags — color follows pillar (dev = purple, music = amber, video = teal) */
 .tag{
   display:inline-flex; align-items:center; gap:.4rem;
   padding:.32rem .7rem; border-radius:999px;
@@ -66,7 +66,7 @@ section{ scroll-margin-top:84px; }
 }
 .tag.dev{ background:var(--code-tint); color:var(--code); }
 .tag.music{ background:var(--sound-tint); color:#8a6600; }
-.tag.film{ background:var(--frame-tint); color:var(--frame); }
+.tag.video{ background:var(--frame-tint); color:var(--frame); }
 
 /* buttons */
 .btn{
@@ -182,7 +182,7 @@ section{ scroll-margin-top:84px; }
 }
 
 /* ==========================================================
-   PAGE HERO (dedicated pages: projects / music / films)
+   PAGE HERO (dedicated pages: projects / music / videos)
    A lighter-weight intro block instead of the full homepage hero.
 ========================================================== */
 .page-hero{ padding:3rem 0 1rem; }
@@ -230,7 +230,7 @@ section{ scroll-margin-top:84px; }
 }
 
 /* ==========================================================
-   CARDS (projects / music / films share this)
+   CARDS (projects / music / videos share this)
 ========================================================== */
 .cards-grid{
   display:grid; gap:1.75rem;
@@ -276,13 +276,13 @@ section{ scroll-margin-top:84px; }
 .project .card{ box-shadow:none; }
 .project .card:hover{ box-shadow:var(--pop-sm); }
 .music .card:hover{ box-shadow:6px 6px 0 var(--sound); }
-.films .card:hover{ box-shadow:6px 6px 0 var(--frame); }
+.videos .card:hover{ box-shadow:6px 6px 0 var(--frame); }
 
 /* cover art reads better as a square than a cropped landscape */
 .music .card-media{ aspect-ratio:1/1; }
 
 /* the play icon needs to be visible without a hover state for touch devices */
-.music .card-media, .films .card-media{ cursor:pointer; }
+.music .card-media, .videos .card-media{ cursor:pointer; }
 
 /* staggered reveal so cards in a row don't all pop in at once */
 .cards-grid .card:nth-child(3n+1){ transition-delay:.05s; }

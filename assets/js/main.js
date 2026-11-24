@@ -1,6 +1,6 @@
 /* ==========================================================
    SHARED SITE SCRIPT
-   Loaded on every page (index, projects, music, films).
+   Loaded on every page (index, projects, music, videos).
    Each block below is independent and no-ops safely on pages
    that don't have the elements it looks for.
 ========================================================== */
@@ -29,7 +29,7 @@ if (menuToggle && navLinks) {
 }
 
 /* ---------- Active nav link, based on the current page ----------
-   Projects/Music/Films are now real pages instead of in-page anchors,
+   Projects/Music/Videos are now real pages instead of in-page anchors,
    so "active" is just: does this link's filename match the page
    we're currently on? (About/Contact stay unhighlighted since they're
    anchors on the homepage, not standalone pages.) */
@@ -60,11 +60,11 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-/* ---------- Music & film play icons ----------
+/* ---------- Music & video play icons ----------
    Clicking anywhere on the artwork opens the same link as the card's
    "Listen on Spotify" / "Watch on YouTube" button, so the play icon
    is a real control rather than a decoration that does nothing. */
-document.querySelectorAll('.music .card, .films .card').forEach(card => {
+document.querySelectorAll('.music .card, .videos .card').forEach(card => {
   const media = card.querySelector('.card-media');
   const link = card.querySelector('.card-body a[href]');
   if (media && link) {
