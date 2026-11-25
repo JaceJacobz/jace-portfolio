@@ -370,3 +370,195 @@ form textarea{ resize:vertical; min-height:130px; }
   transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
 }
 .reveal.in-view{ opacity:1; transform:translateY(0); }
+
+
+/* ---------- release dates, card actions, whatsapp ---------- */
+.card-meta{ display:flex; align-items:center; gap:.7rem; margin-bottom:.8rem; }
+.card-meta .tag{ margin-bottom:0; }
+.card-date{ font-size:.8rem; font-weight:700; color:var(--ink-soft); letter-spacing:.02em; }
+.card-actions{ display:flex; flex-wrap:wrap; gap:.7rem; }
+.wa-btn{ margin:.4rem 0 1.4rem; }
+
+
+/* ==========================================================
+   LAYOUT UPGRADE — numbered sections, hero cards, marquee,
+   stats, pillar-tinted sections, year groups, phone tab bar
+========================================================== */
+
+/* numbered eyebrows: "01 About" */
+.eyebrow.numbered::before{ display:none; }
+.eyebrow.numbered b{
+  font-family:'Clash Display',sans-serif; font-weight:700; font-size:.8rem;
+  color:#fff; background:var(--coral); border:2px solid var(--ink);
+  border-radius:999px; padding:.05rem .55rem; letter-spacing:.04em;
+}
+
+/* hero floating cards */
+.float-card{
+  position:absolute; background:var(--paper); border:2px solid var(--ink);
+  border-radius:var(--radius); box-shadow:var(--pop-sm);
+}
+.now-playing{
+  bottom:70px; right:-26px; display:flex; align-items:center; gap:.65rem;
+  padding:.55rem .8rem .55rem .55rem; transition:transform .2s ease, box-shadow .2s ease;
+}
+.now-playing:hover{ transform:translate(-3px,-3px); box-shadow:7px 7px 0 var(--ink); }
+.now-playing img{ width:44px; height:44px; border-radius:8px; border:2px solid var(--ink); object-fit:cover; }
+.np-text{ display:flex; flex-direction:column; line-height:1.15; }
+.np-text small{ font-size:.62rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); }
+.np-text b{ font-family:'Clash Display',sans-serif; font-size:.95rem; }
+.eq{ display:flex; align-items:flex-end; gap:2px; height:18px; margin-left:.2rem; }
+.eq i{ width:3px; background:var(--coral); border-radius:2px; animation:eq 1s ease-in-out infinite; }
+.eq i:nth-child(1){ height:40%; animation-delay:-.2s; }
+.eq i:nth-child(2){ height:90%; animation-delay:-.5s; }
+.eq i:nth-child(3){ height:60%; animation-delay:-.8s; }
+.eq i:nth-child(4){ height:75%; animation-delay:-.35s; }
+@keyframes eq{ 0%,100%{ transform:scaleY(.35); } 50%{ transform:scaleY(1); } }
+.eq i{ transform-origin:bottom; }
+
+.code-card{
+  top:-18px; left:-104px; width:206px; background:var(--ink); color:#F3EEE4;
+  box-shadow:var(--pop-sm) ; border-color:var(--ink); overflow:hidden;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.7rem;
+}
+.cc-bar{ display:flex; align-items:center; gap:5px; padding:.4rem .6rem; background:#1d1e24; color:#9a9ba3; font-size:.62rem; }
+.cc-bar i{ width:7px; height:7px; border-radius:50%; background:#44454B; }
+.cc-bar i:first-child{ background:var(--coral); }
+.code-card pre{ margin:0; padding:.6rem .7rem .75rem; line-height:1.55; white-space:pre; }
+.code-card .k{ color:#c4a8ff; }
+.code-card .s{ color:#F3EEE4; }
+.code-card .p1{ color:#a58bff; } .code-card .p2{ color:var(--sound); } .code-card .p3{ color:#3fd0b6; }
+
+/* marquee band */
+.marquee{ background:var(--ink); color:var(--paper); border-top:2px solid var(--ink); overflow:hidden; padding:.9rem 0; }
+.marquee-track{ display:flex; width:max-content; gap:1.6rem; animation:marquee 32s linear infinite; }
+.marquee-track span{
+  font-family:'Clash Display',sans-serif; font-weight:700; font-size:clamp(1.1rem,3.4vw,1.6rem);
+  letter-spacing:.06em; white-space:nowrap;
+}
+.marquee-track i{ font-style:normal; color:var(--coral); font-size:1.2rem; align-self:center; }
+.marquee-track span:nth-of-type(3n+1){ color:#b9a6ff; }
+.marquee-track span:nth-of-type(3n+2){ color:var(--sound); }
+.marquee-track span:nth-of-type(3n){ color:#46d6bd; }
+@keyframes marquee{ to{ transform:translateX(-50%); } }
+
+/* stats strip */
+.stats{ background:var(--paper-dim); border-bottom:2px solid var(--ink); }
+.stats-grid{ display:grid; grid-template-columns:repeat(4,1fr); }
+.stat{ padding:2rem 1rem; text-align:center; border-left:2px solid var(--ink); }
+.stat:first-child{ border-left:0; }
+.stat b{ display:block; font-family:'Clash Display',sans-serif; font-size:clamp(2.2rem,6vw,3.4rem); line-height:1; }
+.stat span{ display:block; margin-top:.4rem; font-size:.8rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); }
+.s-music b{ color:var(--sound); } .s-video b{ color:var(--frame); } .s-code b{ color:var(--code); } .s-coral b{ color:var(--coral); }
+
+/* pillar-tinted sections so each part of the page feels different */
+.section.project{ background:var(--code-tint); }
+.section.music{ background:var(--sound-tint); }
+.section.videos{ background:var(--frame-tint); }
+.section.project .card, .section.music .card, .section.videos .card{ background:var(--paper); }
+
+/* project bento: the first project is the hero tile */
+.project .cards-grid{ grid-template-columns:1.5fr 1fr; align-items:stretch; }
+.project .cards-grid .card{ display:flex; flex-direction:column; }
+.project .cards-grid .card:first-child .card-media{ aspect-ratio:16/9; }
+.project .cards-grid .card-body{ flex:1; display:flex; flex-direction:column; align-items:flex-start; }
+.project .cards-grid .card-actions, .project .cards-grid .card-body > a{ margin-top:auto; }
+.project .cards-grid .card:first-child h3{ font-size:1.5rem; }
+
+/* music page: year groups with big outlined numerals */
+.year-group + .year-group{ margin-top:3.5rem; }
+.year-head{ display:flex; align-items:center; gap:1.2rem; margin-bottom:1.6rem; }
+.year-num{
+  font-family:'Clash Display',sans-serif; font-weight:700; line-height:1;
+  font-size:clamp(3rem,11vw,5.5rem); color:transparent; -webkit-text-stroke:2px var(--ink);
+}
+.year-line{ flex:1; height:2px; background:var(--ink); }
+
+/* mobile tab bar + whatsapp button (hidden on desktop) */
+.tabbar, .wa-fab{ display:none; }
+
+@media (max-width:860px){
+  body{ padding-bottom:calc(76px + env(safe-area-inset-bottom,0px)); }
+  .menu-toggle{ display:none !important; }
+  .nav-links{ display:none !important; }
+  .nav{ padding:.8rem 0; }
+
+  .tabbar{
+    display:grid; grid-template-columns:repeat(5,1fr); gap:.2rem;
+    position:fixed; left:0; right:0; bottom:0; z-index:60;
+    background:var(--paper); border-top:2px solid var(--ink);
+    padding:.4rem .4rem calc(.4rem + env(safe-area-inset-bottom,0px));
+  }
+  .tabbar a{
+    display:flex; flex-direction:column; align-items:center; gap:.2rem;
+    padding:.4rem 0 .35rem; border-radius:12px; border:2px solid transparent;
+    font-size:.68rem; font-weight:700; color:var(--ink-soft);
+  }
+  .tabbar a i{ font-size:1.15rem; }
+  .tabbar a.active{ background:var(--coral); color:#fff; border-color:var(--ink); }
+  .wa-fab{
+    display:flex; align-items:center; justify-content:center;
+    position:fixed; right:14px; bottom:calc(88px + env(safe-area-inset-bottom,0px)); z-index:55;
+    width:50px; height:50px; border-radius:50%; font-size:1.6rem;
+    background:var(--paper); color:#169c4b; border:2px solid var(--ink); box-shadow:var(--pop-sm);
+  }
+
+  .code-card{ display:none; }
+  .now-playing{ top:auto; bottom:44px; right:-12px; padding:.45rem .65rem .45rem .45rem; }
+  .now-playing img{ width:36px; height:36px; }
+
+  .stats-grid{ grid-template-columns:1fr 1fr; }
+  .stat{ padding:1.5rem .8rem; border-left:0; border-top:2px solid var(--ink); }
+  .stat:nth-child(2n){ border-left:2px solid var(--ink); }
+  .stat:nth-child(-n+2){ border-top:0; }
+  .project .cards-grid{ grid-template-columns:1fr 1fr; }
+}
+
+/* phones: every card row becomes a swipeable carousel */
+@media (max-width:700px){
+  .cards-grid, .project .cards-grid{
+    display:flex; gap:1rem; overflow-x:auto; scroll-snap-type:x mandatory;
+    margin-right:-4%; padding:0 4% 1.1rem 0; -webkit-overflow-scrolling:touch; scrollbar-width:none;
+  }
+  .cards-grid::-webkit-scrollbar{ display:none; }
+  .cards-grid .card{ flex:0 0 78%; scroll-snap-align:start; }
+  .cards-grid .card.reveal{ opacity:1 !important; transform:none !important; }
+  .project .cards-grid .card:first-child .card-media{ aspect-ratio:16/10; }
+  .section{ padding:3.5rem 0; }
+  .year-group + .year-group{ margin-top:2.2rem; }
+}
+
+
+/* card titles sit right above the button now that songs have no blurb */
+.music .card-body h3, .videos .card-body h3{ margin-bottom:1.1rem; }
+
+/* ==========================================================
+   PRELOADER — logo, equalizer bars and a fill bar. Shown once
+   per visit; the hide logic lives in main.js, with a CSS
+   failsafe so it can never get stuck.
+========================================================== */
+.no-preload .preloader{ display:none; }
+.preloader{
+  position:fixed; inset:0; z-index:200; background:var(--paper);
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.5rem;
+  transition:opacity .5s ease, visibility .5s ease;
+  animation:plFailsafe 0s linear 4s forwards;
+}
+.preloader.done{ opacity:0; visibility:hidden; }
+@keyframes plFailsafe{ to{ opacity:0; visibility:hidden; } }
+.pl-logo{ font-family:'Clash Display',sans-serif; font-weight:700; font-size:clamp(1.7rem,7vw,2.4rem); letter-spacing:.01em; }
+.pl-logo .dot{ color:var(--coral); }
+.pl-bars{ display:flex; align-items:flex-end; gap:7px; height:54px; }
+.pl-bars i{
+  width:9px; height:100%; border:2px solid var(--ink); border-radius:5px;
+  transform-origin:bottom; transform:scaleY(.3); animation:eq .9s ease-in-out infinite;
+}
+.pl-bars i:nth-child(1){ background:var(--code);  animation-delay:-.1s; }
+.pl-bars i:nth-child(2){ background:var(--sound); animation-delay:-.45s; }
+.pl-bars i:nth-child(3){ background:var(--coral); animation-delay:-.75s; }
+.pl-bars i:nth-child(4){ background:var(--frame); animation-delay:-.3s; }
+.pl-bars i:nth-child(5){ background:var(--code);  animation-delay:-.6s; }
+.pl-bar{ width:min(220px,60vw); height:10px; border:2px solid var(--ink); border-radius:999px; overflow:hidden; }
+.pl-bar span{ display:block; height:100%; width:0; background:var(--coral); animation:plFill 1.1s cubic-bezier(.3,.7,.2,1) forwards; }
+@keyframes plFill{ to{ width:100%; } }
+.pl-tag{ font-size:.72rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); }

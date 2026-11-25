@@ -3,16 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <title>Projects — Jace Jacobz</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Projects built by Jace Jacobz — full-stack development and AI-adjacent tools.">
+<!-- Link previews (WhatsApp, Instagram, X, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jace Jacobz">
+<meta property="og:title" content="Projects — Jace Jacobz">
+<meta property="og:description" content="Projects built by Jace Jacobz — full-stack development and AI-adjacent tools.">
+<meta property="og:url" content="https://jacejacobz.github.io/jace-portfolio/projects.html">
+<meta property="og:image" content="https://jacejacobz.github.io/jace-portfolio/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Projects — Jace Jacobz">
+<meta name="twitter:description" content="Projects built by Jace Jacobz — full-stack development and AI-adjacent tools.">
+<meta name="twitter:image" content="https://jacejacobz.github.io/jace-portfolio/assets/images/og-image.jpg">
 
-<link rel="shortcut icon" href="assets/images/fav-icon.png" type="image/x-icon">
+<link rel="icon" href="assets/images/fav-icon.png" type="image/png">
 <link rel="preconnect" href="https://api.fontshare.com">
 <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,500,700&f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script>try{if(sessionStorage.getItem("pl"))document.documentElement.classList.add("no-preload")}catch(e){}</script>
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body id="top">
+<!-- ============ PRELOADER (shows once per visit) ============ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="pl-logo">JACE<span class="dot">//</span>JACOBZ</div>
+  <div class="pl-bars"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="pl-bar"><span></span></div>
+  <div class="pl-tag">Code. Music. Visuals.</div>
+</div>
+<noscript><style>.preloader{display:none}</style></noscript>
+
 
 <!-- ============ HEADER ============ -->
 <header class="site-header">
@@ -38,7 +61,7 @@
 <section class="page-hero">
   <div class="container">
     <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back home</a>
-    <span class="eyebrow">Projects</span>
+    <span class="eyebrow numbered"><b>02</b> Projects</span>
     <h1 class="section-title">Everything I've built.</h1>
     <p class="section-note">Tools and products I've shipped — mostly AI-adjacent, always meant to be used, not just demoed.</p>
   </div>
@@ -52,19 +75,22 @@
     <div class="cards-grid">
       <div class="card">
         <div class="card-media">
-          <img src="assets/images/voxloop-studio.jpg" alt="Voxloop Studio logo over a vocal waveform">
+          <img src="assets/images/voxloop-studio.webp" loading="lazy" decoding="async" alt="Voxloop Studio logo over a vocal waveform">
         </div>
         <div class="card-body">
           <span class="tag dev"><i class="fa-solid fa-code"></i> Dev</span>
           <h3>Voxloop Studio</h3>
           <p>An AI-assisted web app that helps mix and master vocals — pitch correction, alignment and audio processing — for a polished, studio-ready sound.</p>
-          <a href="https://github.com/JaceJacobz/voxloop-studio" class="btn sm outline">GitHub <i class="fa-brands fa-github"></i></a>
+          <div class="card-actions">
+            <a href="https://jacejacobz.github.io/voxloop-studio/" class="btn sm solid-coral">Live demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="https://github.com/JaceJacobz/voxloop-studio" class="btn sm outline">GitHub <i class="fa-brands fa-github"></i></a>
+          </div>
         </div>
       </div>
 
       <div class="card">
         <div class="card-media">
-          <img src="assets/images/Hostcanon.png" alt="HostCanon website">
+          <img src="assets/images/Hostcanon.webp" loading="lazy" decoding="async" alt="HostCanon website">
         </div>
         <div class="card-body">
           <span class="tag dev"><i class="fa-solid fa-code"></i> Dev</span>
@@ -85,6 +111,17 @@
     <a href="#top" class="back-to-top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
   </div>
 </footer>
+
+
+<!-- ============ MOBILE TAB BAR ============ -->
+<nav class="tabbar" aria-label="Main">
+  <a href="index.html" data-tab="index.html"><i class="fa-solid fa-house"></i><span>Home</span></a>
+  <a href="projects.html" data-tab="projects.html"><i class="fa-solid fa-laptop-code"></i><span>Work</span></a>
+  <a href="music.html" data-tab="music.html"><i class="fa-solid fa-music"></i><span>Music</span></a>
+  <a href="videos.html" data-tab="videos.html"><i class="fa-solid fa-circle-play"></i><span>Videos</span></a>
+  <a href="index.html#contact" data-tab="contact"><i class="fa-solid fa-paper-plane"></i><span>Contact</span></a>
+</nav>
+<a class="wa-fab" href="https://wa.me/2348140527076?text=Hi%20Jace%2C%20I%20found%20your%20portfolio%20and%20I%27d%20like%20to%20talk." aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
 
 <script src="assets/js/main.js"></script>
 </body>

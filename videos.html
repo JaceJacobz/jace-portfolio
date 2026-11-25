@@ -3,16 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <title>Videos — Jace Jacobz</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Official lyric videos by Jace Jacobz.">
+<!-- Link previews (WhatsApp, Instagram, X, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jace Jacobz">
+<meta property="og:title" content="Videos — Jace Jacobz">
+<meta property="og:description" content="Official lyric videos by Jace Jacobz.">
+<meta property="og:url" content="https://jacejacobz.github.io/jace-portfolio/videos.html">
+<meta property="og:image" content="https://jacejacobz.github.io/jace-portfolio/assets/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Videos — Jace Jacobz">
+<meta name="twitter:description" content="Official lyric videos by Jace Jacobz.">
+<meta name="twitter:image" content="https://jacejacobz.github.io/jace-portfolio/assets/images/og-image.jpg">
 
-<link rel="shortcut icon" href="assets/images/fav-icon.png" type="image/x-icon">
+<link rel="icon" href="assets/images/fav-icon.png" type="image/png">
 <link rel="preconnect" href="https://api.fontshare.com">
 <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,500,700&f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script>try{if(sessionStorage.getItem("pl"))document.documentElement.classList.add("no-preload")}catch(e){}</script>
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body id="top">
+<!-- ============ PRELOADER (shows once per visit) ============ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="pl-logo">JACE<span class="dot">//</span>JACOBZ</div>
+  <div class="pl-bars"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="pl-bar"><span></span></div>
+  <div class="pl-tag">Code. Music. Visuals.</div>
+</div>
+<noscript><style>.preloader{display:none}</style></noscript>
+
 
 <!-- ============ HEADER ============ -->
 <header class="site-header">
@@ -38,7 +61,7 @@
 <section class="page-hero">
   <div class="container">
     <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back home</a>
-    <span class="eyebrow">Videos</span>
+    <span class="eyebrow numbered"><b>04</b> Videos</span>
     <h1 class="section-title">Lyrics, in motion.</h1>
     <p class="section-note">Official lyric videos for my songs.</p>
   </div>
@@ -52,26 +75,24 @@
     <div class="cards-grid">
       <div class="card">
         <div class="card-media">
-          <img src="assets/images/full-package-thumb.jpg" alt="Full Package lyric video thumbnail">
+          <img src="assets/images/full-package-thumb.webp" loading="lazy" decoding="async" alt="Full Package lyric video thumbnail">
           <div class="card-play"><i class="fa-solid fa-circle-play"></i></div>
         </div>
         <div class="card-body">
           <span class="tag video"><i class="fa-solid fa-video"></i> Lyric video</span>
           <h3>Full Package</h3>
-          <p>The official lyric video for Full Package.</p>
           <a href="https://youtu.be/ElX-lm3iU8Q" class="btn sm outline">Watch on YouTube <i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
 
       <div class="card">
         <div class="card-media">
-          <img src="assets/images/sugar-and-spice-thumb.jpg" alt="Sugar &amp; Spice lyric video thumbnail">
+          <img src="assets/images/sugar-and-spice-thumb.webp" loading="lazy" decoding="async" alt="Sugar &amp; Spice lyric video thumbnail">
           <div class="card-play"><i class="fa-solid fa-circle-play"></i></div>
         </div>
         <div class="card-body">
           <span class="tag video"><i class="fa-solid fa-video"></i> Lyric video</span>
           <h3>Sugar &amp; Spice</h3>
-          <p>The official lyric video for my debut single, Sugar &amp; Spice.</p>
           <a href="https://youtu.be/jPSlTZLBIx8" class="btn sm outline">Watch on YouTube <i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
@@ -86,6 +107,17 @@
     <a href="#top" class="back-to-top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
   </div>
 </footer>
+
+
+<!-- ============ MOBILE TAB BAR ============ -->
+<nav class="tabbar" aria-label="Main">
+  <a href="index.html" data-tab="index.html"><i class="fa-solid fa-house"></i><span>Home</span></a>
+  <a href="projects.html" data-tab="projects.html"><i class="fa-solid fa-laptop-code"></i><span>Work</span></a>
+  <a href="music.html" data-tab="music.html"><i class="fa-solid fa-music"></i><span>Music</span></a>
+  <a href="videos.html" data-tab="videos.html"><i class="fa-solid fa-circle-play"></i><span>Videos</span></a>
+  <a href="index.html#contact" data-tab="contact"><i class="fa-solid fa-paper-plane"></i><span>Contact</span></a>
+</nav>
+<a class="wa-fab" href="https://wa.me/2348140527076?text=Hi%20Jace%2C%20I%20found%20your%20portfolio%20and%20I%27d%20like%20to%20talk." aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
 
 <script src="assets/js/main.js"></script>
 </body>
